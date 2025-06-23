@@ -1,0 +1,969 @@
+/* Page Hero */
+.pageHero {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pageHero h1 {
+  font-size: 2.5rem; /* 40px para paridad exacta con HTML original */
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.pageHero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  font-size: 0.95rem;
+}
+
+.breadcrumb li {
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: '›';
+  margin-left: 1rem;
+  opacity: 0.7;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Comparison Intro */
+.comparisonIntro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+/* Section Title */
+.sectionTitle {
+  color: #3a0ca3;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #4361ee, #3a0ca3);
+}
+
+/* Material Rating */
+.materialRating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  display: inline-block;
+  min-width: 70px;
+  text-align: right;
+}
+
+.featureScore {
+  background: #4f46e5;
+  color: white;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  min-width: 24px;
+  text-align: center;
+  display: inline-block;
+  line-height: 1.2; /* Ajuste para alineación vertical perfecta */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ajustes para la tabla de comparación */
+.comparisonTable td {
+  vertical-align: middle;
+}
+
+.comparisonTable .materialRating {
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+/* Comparison Table */
+.comparisonTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.95rem;
+  border: 1px solid #e2e8f0;
+}
+
+.comparisonTable th,
+.comparisonTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+}
+
+.comparisonTable th {
+  background-color: #4f46e5;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.comparisonTable th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.comparisonTable th:last-child {
+  border-top-right-radius: 8px;
+  border-right: none;
+}
+
+.comparisonTable tr:last-child td {
+  border-bottom: none;
+}
+
+.comparisonTable td:last-child {
+  border-right: none;
+}
+
+.comparisonTable tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.comparisonTable tr:hover {
+  background-color: #f1f5f9;
+}
+
+.comparisonTable td:first-child {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+/* Material Properties */
+.materialProperties {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.materialProperties li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.materialProperties li:last-child {
+  border-bottom: none;
+}
+
+.propertyName {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.propertyValue {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Material Pros & Cons */
+.materialProsCons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.pros, .cons {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pros h4, .cons h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.pros h4 {
+  color: #2e7d32;
+}
+
+.cons h4 {
+  color: #c62828;
+}
+
+.pros ul, .cons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pros li, .cons li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #4a5568;
+}
+
+.pros li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.cons li::before {
+  content: '✗';
+  position: absolute;
+  left: 0;
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* Material Uses */
+.materialUses {
+  margin-top: 2rem;
+}
+
+.materialUses h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.usesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.useItem {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.useItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.useItem i {
+  font-size: 1.5rem;
+  color: #4361ee;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.useItem span {
+  display: block;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* Material Cards */
+.materialCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.materialCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.materialCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.materialHeader {
+  padding: 20px 25px;
+  background: linear-gradient(135deg, #3a0ca3, #4361ee);
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.materialHeader::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.materialCard:hover .materialHeader::after {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Estilos para iconos de materiales */
+.materialIcon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* Colores específicos para cada material */
+.materialCard:nth-child(1) .materialIcon { /* PLA */
+  background-color: #4CAF50;
+}
+
+.materialCard:nth-child(2) .materialIcon { /* ABS */
+  background-color: #2196F3;
+}
+
+.materialCard:nth-child(3) .materialIcon { /* PETG */
+  background-color: #9C27B0;
+}
+
+.materialCard:nth-child(4) .materialIcon { /* TPU */
+  background-color: #FF9800;
+}
+
+.materialCard:nth-child(5) .materialIcon { /* Nylon */
+  background-color: #607D8B;
+}
+
+.materialIcon svg {
+  width: 1em;
+  height: 1em;
+  color: white;
+}
+
+/* Estilos para iconos de ventajas/desventajas */
+.pros h4,
+.cons h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.pros h4 svg {
+  color: #4CAF50; /* Verde para ventajas */
+}
+
+.cons h4 svg {
+  color: #F44336; /* Rojo para desventajas */
+}
+
+.materialCard h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.materialTag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* Material Content */
+.materialContent {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.materialContent p {
+  margin-bottom: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Estilos para listas de propiedades */
+.materialProperties {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  min-height: 160px; /* Altura fija para todas las tarjetas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.materialProperties li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e2e8f0;
+  color: #4a5568;
+  flex: 1;
+  min-height: 40px; /* Altura mínima para cada elemento */
+  align-items: center;
+}
+
+.materialProperties li:last-child {
+  border-bottom: 1px dashed #e2e8f0; /* Mantener el borde para consistencia */
+}
+
+/* Asegurar que el último elemento de la lista no tenga borde inferior */
+.materialProperties li:last-child {
+  border-bottom: none;
+}
+
+.propertyName {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.propertyValue {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Estilos para ventajas y desventajas */
+.materialProsCons {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.pros, .cons {
+  flex: 1;
+  min-width: 120px;
+}
+
+.pros h4, .cons h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #2d3748;
+}
+
+.pros ul, .cons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pros li, .cons li {
+  position: relative;
+  padding: 4px 0 4px 24px;
+  margin-bottom: 6px;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.pros li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.cons li:before {
+  content: '✗';
+  position: absolute;
+  left: 0;
+  color: #F44336;
+  font-weight: bold;
+}
+
+/* Estilos para la sección de usos */
+.materialUses {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.materialUses h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.usesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.useItem {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.useItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.useItem svg {
+  color: #4361ee;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+.useItem span {
+  font-size: 0.8rem;
+  color: #4a5568;
+  display: block;
+}
+
+/* Material Card Enhancements */
+.materialCard {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.materialHeader {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+.materialHeader::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: white;
+  transform: skewY(-2deg);
+  z-index: -1;
+}
+
+.materialIcon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.materialTag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Recommendations */
+.recommendations {
+  margin: 4rem 0;
+}
+
+.recommendationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.recommendationCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recommendationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.recommendationIcon {
+  width: 60px;
+  height: 60px;
+  background: #f0f4ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #4361ee;
+  font-size: 1.5rem;
+}
+
+/* Asegurar que los iconos de recomendación tengan el tamaño correcto */
+.recommendationIcon svg {
+  width: 1.5em;
+  height: 1.5em;
+  color: #4361ee;
+}
+
+.recommendationCard h3 {
+  margin: 0 0 1rem;
+  color: #2d3748;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.recommendationCard p {
+  color: #4a5568;
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.recommendationCard p strong {
+  color: #3a0ca3;
+  font-weight: 600;
+}
+
+.recommendationCard p strong {
+  color: #2d3748;
+}
+
+/* Newsletter */
+.newsletter {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.newsletterForm {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 0.5rem;
+}
+
+.newsletterForm input {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.newsletterForm button {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletterForm button:hover {
+  background: #ff5252;
+}
+
+.newsletterNote {
+  margin-top: 1rem !important;
+  font-size: 0.9rem !important;
+  opacity: 0.8 !important;
+}
+
+/* Footer */
+.footer {
+  background: #1a1a2e;
+  color: #e2e8f0;
+  padding: 4rem 0 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Eliminar cualquier pseudo-elemento problemático */
+.footer::before,
+.footer::after {
+  content: none !important;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footerCol h3 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.footerCol h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: #4361ee;
+}
+
+.footerCol p {
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.socialLinks a:hover {
+  background: #4361ee;
+  transform: translateY(-3px);
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 0.8rem;
+}
+
+.footerLinks a {
+  color: #94a3b8;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Asegurar que los iconos de FontAwesome tengan el tamaño correcto */
+.footerLinks svg,
+.socialLinks svg {
+  width: 1em;
+  height: 1em;
+}
+
+.footerLinks a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.footerLinks i {
+  width: 20px;
+  text-align: center;
+  color: #4361ee;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.footerLegal {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footerLegal a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerLegal a:hover {
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) and (max-width: 991px) {
+  .materialCards,
+  .recommendationGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pageHero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .pageHero p {
+    font-size: 1.1rem;
+  }
+  
+  .materialProsCons {
+    grid-template-columns: 1fr;
+  }
+  
+  .breadcrumb {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .breadcrumb li {
+    margin: 0.3rem 0.5rem;
+  }
+  
+  .materialCard {
+    margin-bottom: 2rem;
+  }
+  
+  .usesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .materialCards,
+  .recommendationGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparisonTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
