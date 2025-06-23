@@ -45,24 +45,27 @@
   border-radius: 4px;
 }
 
-nav ul {
+/* Navigation menu styles */
+.navMenu ul {
   display: flex;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-nav ul li {
+.navMenu ul li {
   margin-left: 25px;
   position: relative;
 }
 
-nav ul li a {
+.navMenu ul li a {
   color: var(--dark);
   font-weight: 600;
   font-size: 1.05rem;
   padding: 8px 5px;
 }
 
-nav ul li a:after {
+.navMenu ul li a:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -74,11 +77,11 @@ nav ul li a:after {
   transition: var(--transition);
 }
 
-nav ul li a:hover {
+.navMenu ul li a:hover {
   color: var(--primary);
 }
 
-nav ul li a:hover:after {
+.navMenu ul li a:hover:after {
   width: 100%;
 }
 
@@ -97,10 +100,10 @@ nav ul li a:hover:after {
   .mobileMenuBtn {
     display: block;
   }
-
-  nav ul {
-    display: none;
-    position: fixed;
+  .navMenu ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -111,17 +114,17 @@ nav ul li a:hover:after {
     align-items: center;
     justify-content: flex-start;
     z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
-
-  nav ul.show {
-    display: flex;
+  .navMenu ul.show {
+    visibility: visible;
+    opacity: 1;
+    position: fixed;
   }
-
-  nav ul li {
+  .navMenu ul li {
     margin: 15px 0;
   }
-
-  nav ul li a {
+  .navMenu ul li a {
     color: white;
     font-size: 1.4rem;
     padding: 10px 20px;

@@ -1,9 +1,9 @@
-// src/app/layout.js
-'use client'; // Solo si necesitas usar hooks o componentes interactivos
+import '@/styles/globals.css';
+import { Inter } from 'next/font/google';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
-import '@styles/globals.css';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Tecno3D Hub | Guía Definitiva de Impresión 3D en España',
@@ -13,14 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body>
+      <body className={inter.className}>
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
